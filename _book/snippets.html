@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fortran-Programming</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Fortran-Programming">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Fortran-Programming" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fortran-Programming" />
+  
+  
+  
+
+<meta name="author" content="Janesh Devkota">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="debugging-tips.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>2</b> Logical operators</a></li>
+<li class="chapter" data-level="3" data-path="if-structure.html"><a href="if-structure.html"><i class="fa fa-check"></i><b>3</b> If structure</a></li>
+<li class="chapter" data-level="4" data-path="select-case.html"><a href="select-case.html"><i class="fa fa-check"></i><b>4</b> Select Case</a></li>
+<li class="chapter" data-level="5" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>5</b> Debugging Tips</a><ul>
+<li class="chapter" data-level="5.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>5.1</b> Debugging shortcuts</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>6</b> Snippets</a><ul>
+<li class="chapter" data-level="6.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>6.1</b> Check if a file exists</a></li>
+<li class="chapter" data-level="6.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>6.2</b> Open and close files</a></li>
+<li class="chapter" data-level="6.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>6.3</b> Append files in FORTRAN</a></li>
+<li class="chapter" data-level="6.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>6.4</b> Allocatable arrays in FORTRAN 90</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fortran-Programming</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="snippets" class="section level1">
+<h1><span class="header-section-number">6</span> Snippets</h1>
+<div id="check-if-a-file-exists" class="section level2">
+<h2><span class="header-section-number">6.1</span> Check if a file exists</h2>
+<pre><code>
+! DEFINE FEXISTS as LOGICAL
+LOGICAL FEXISTS 
+INQUIRE (FILE = &#39;Filename.DAT&#39;, EXIST = FEXISTS)
+  IF( FEXISTS )THEN
+
+  ELSE
+
+  ENDIF</code></pre>
+</div>
+<div id="open-and-close-files" class="section level2">
+<h2><span class="header-section-number">6.2</span> Open and close files</h2>
+<p>To open files in FORTRAN simply use:</p>
+<p><code>OPEN(7, FILE = 'hello.txt', STATUS = 'UNKNOWN')</code> where 7 = the unique number assigned to the file that is being opened.</p>
+<p>To close the files we can simply use :</p>
+<p><code>CLOSE(7)</code></p>
+<p>If we want to delete the file then we can use</p>
+<p><code>CLOSE(7, STATUS = 'DELETE')</code></p>
+<p>A simple example is given here:</p>
+<pre><code>open (unit=CHROMOSOME_UNIT, file=filename, status=&#39;old&#39;, &amp;
+            iostat=open_status, action=&#39;read&#39;, position=&#39;rewind&#39;)
+        if ( open_status /= 0 ) then
+            print *, &#39;Could not open &#39;,filename,&#39; for reading.&#39;, &amp;
+            &#39;unit = &#39;, unit
+            stop
+        endif</code></pre>
+<p>The open statement uses a number of tags to specify which file to open and how it will be used.</p>
+<p><strong>Required tags:</strong></p>
+<ul>
+<li>unit: integer unit number to be used by read, write, and close.</li>
+<li>filename: String constant, variable, or expression representing the absolute or relative pathname of the file.</li>
+<li>status: String constant, variable, or expression that reduces to:
+<ul>
+<li>‘old’: For existing files, usually used when reading.</li>
+<li>‘new’: Used when writing to a file that does not yet exist.</li>
+<li>‘replace’: Used to overwrite a file that already exists.</li>
+</ul></li>
+<li>iostat: Integer variable to receive the status of the open operation. If the file is opened successfully, the variable is set to 0. Otherwise, it will contain a non-zero error code that indicates why the file could not be opened. (Does not exist, no permission, etc.)</li>
+</ul>
+<p><strong>Optional tags:</strong></p>
+<ul>
+<li>action: String
+<ul>
+<li>‘read’: Open for reading only</li>
+<li>‘write’: Open for writing only</li>
+<li>‘readwrite’: Allow both reading and writing</li>
+</ul></li>
+<li>position: String
+<ul>
+<li>‘rewind’: Start at beginning of file</li>
+<li>‘append’: Writes add to file rather than overwrite</li>
+</ul></li>
+</ul>
+</div>
+<div id="append-files-in-fortran" class="section level2">
+<h2><span class="header-section-number">6.3</span> Append files in FORTRAN</h2>
+<p>To do the appends in FORTRAN we could do something like:</p>
+<pre><code>OPEN(95,FILE=OUTDIR//&#39;*.OUT&#39;,POSITION=&#39;APPEND&#39;,STATUS=&#39;OLD&#39;,  FORM=&#39;BINARY&#39;)
+! Some code 
+CLOSE(95) </code></pre>
+<p>In the above code 95 is just used arbitrarily.</p>
+</div>
+<div id="allocatable-arrays-in-fortran-90" class="section level2">
+<h2><span class="header-section-number">6.4</span> Allocatable arrays in FORTRAN 90</h2>
+<p>In FORTRAN 90, one can assign allocatable arrays with the syntax as follows:</p>
+<pre><code>REAL,ALLOCATABLE,DIMENSION(:)::RSSBCW
+REAL, ALLOCATABLE, DIMENSION(:,:):: TESTDF</code></pre>
+<p>In the above example, RSSBCW is a 1-D vector whereas TESTDF is a 2 dimensional array.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="debugging-tips.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

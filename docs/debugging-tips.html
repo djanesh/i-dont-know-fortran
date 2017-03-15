@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fortran-Programming</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Fortran-Programming">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Fortran-Programming" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fortran-Programming" />
+  
+  
+  
+
+<meta name="author" content="Janesh Devkota">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="select-case.html">
+<link rel="next" href="snippets.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>2</b> Logical operators</a></li>
+<li class="chapter" data-level="3" data-path="if-structure.html"><a href="if-structure.html"><i class="fa fa-check"></i><b>3</b> If structure</a></li>
+<li class="chapter" data-level="4" data-path="select-case.html"><a href="select-case.html"><i class="fa fa-check"></i><b>4</b> Select Case</a></li>
+<li class="chapter" data-level="5" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>5</b> Debugging Tips</a><ul>
+<li class="chapter" data-level="5.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>5.1</b> Debugging shortcuts</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>6</b> Snippets</a><ul>
+<li class="chapter" data-level="6.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>6.1</b> Check if a file exists</a></li>
+<li class="chapter" data-level="6.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>6.2</b> Open and close files</a></li>
+<li class="chapter" data-level="6.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>6.3</b> Append files in FORTRAN</a></li>
+<li class="chapter" data-level="6.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>6.4</b> Allocatable arrays in FORTRAN 90</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fortran-Programming</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="debugging-tips" class="section level1">
+<h1><span class="header-section-number">5</span> Debugging Tips</h1>
+<p>Source: <a href="https://software.intel.com/en-us/articles/tips-for-debugging-run-time-failures-in-intel-fortran-applications" class="uri">https://software.intel.com/en-us/articles/tips-for-debugging-run-time-failures-in-intel-fortran-applications</a> Tips for Debugging Run-time Failures in Applications Built with the Intel® Fortran Compiler Your app builds successfully, but crashes at runtime. What Next? Try some useful Intel compiler diagnostic options before launching into lengthy debugger sessions.</p>
+<ol style="list-style-type: decimal">
+<li><p>Build with /traceback (Windows<em>) or –traceback (Linux</em> or Mac OS* X). This can give a stack trace with subroutine or function names, source filenames and line numbers at the point of failure, if it is in user code, without the need to build with debug symbols. This is designed as a lightweight option that can also be left enabled for release builds. If an end user encounters a problem, the traceback can be a starting point for a bug report.</p></li>
+<li><p>Build with /gen-interfaces /warn:interfaces (Windows) or –gen-interfaces –warn interfaces (Linux or Mac OS X). This is able to detect at compile time many instances of argument mismatches between caller and callee, which can otherwise lead to hard-to-debug runtime failures. These options automatically create and check explicit, Fortran90 style interfaces for Fortran77 style or other code that does not already have them. There is no impact on run-time performance.</p></li>
+<li><p>Try building and running with /check (Windows) or –check (Linux and Mac OS X). This instruments your code and makes a number of valuable run-time checks, including array bounds checking, checking for uninitialized or disassociated pointers, and for some types of uninitialized local scalar variables. Bounds checking in particular is likely to make your program run slower.</p></li>
+<li><p>Build your program, including the main routine, with /fpe:0 (Windows) or –fpe0 (Linux or Mac OS X). This will cause your program to halt if it encounters a divide-by-zero, overflow or invalid floating-point exception, instead of generating a NaN (not-a-number) and silently continuing. If you have also specified /traceback (-traceback), you should be able to see where the floating point exception occurred. Any impact on performance is likely to be small.</p></li>
+<li><p>If your application fails early on with a segmentation fault, you might be exceeding the default maximum stack size. On Linux or Mac OS X, try setting ulimit –s unlimited (bash) or limit stacksize unlimited (C shell) On Windows, use the /F build option or increase the stack limits in the IDE under project properties/linker/system/ Stack Commit Size and Stack Reserve Size.</p></li>
+<li><p>Use the compiler provided interfaces. If you call run-time library functions, build with USE IFLPORT If you call OpenMP run-time library functions, compile with USE OMP_LIB If you call functions from MKL or IMSL*, USE the corresponding module(s).</p></li>
+<li><p>Look carefully for any error messages in your output log file. Errors from the Fortran run-time library include an error number. Additional information about such RTL errors may be found in the main compiler documentation under “List of Run-Time Error Messages”, or by searching for the error number directly.</p></li>
+<li><p>If you are building an application using OpenMP*, check out the advice under “Tips for Debugging OpenMP Apps” at /en-us/articles/threading-fortran-applications-for-parallel-performance-on-multi-core-systems</p></li>
+</ol>
+<p>All the above options may be used with release (optimized) builds. Certain options are enabled by default in a debug build made through the Microsoft* Visual Studio* IDE on Windows.</p>
+<p>Additional information may be found in the main compiler documentation in the section Building Applications / Error Handling / Handling Run-Time Errors, e.g. “Understanding Run-Time Errors” and the references therein; also in the article /en-us/articles/determining-root-cause-of-segmentation-faults-sigsegv-or-sigbus-errors.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>OK, sometimes you need to do the heavy lifting. If these suggestions haven’t helped, or if they helped localize the problem but you need more information, it may be time to start interactive debugging. For Windows, see the section Building Applications / Debugging in the main compiler documentation. For Linux or Mac OS X, see the documentation for the Intel® Debugger (idb).</li>
+</ol>
+<div id="debugging-shortcuts" class="section level2">
+<h2><span class="header-section-number">5.1</span> Debugging shortcuts</h2>
+<ul>
+<li>CTRL + <code>-</code> : To go back and forth to the last used.</li>
+<li><code>F12</code> : Go to Definition</li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="select-case.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="snippets.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
