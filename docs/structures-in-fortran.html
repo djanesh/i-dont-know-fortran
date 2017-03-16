@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="logical-operators.html">
-<link rel="next" href="select-case.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="debugging-tips.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -100,18 +100,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>2</b> Logical operators</a></li>
-<li class="chapter" data-level="3" data-path="if-structure.html"><a href="if-structure.html"><i class="fa fa-check"></i><b>3</b> If structure</a></li>
-<li class="chapter" data-level="4" data-path="select-case.html"><a href="select-case.html"><i class="fa fa-check"></i><b>4</b> Select Case</a></li>
-<li class="chapter" data-level="5" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>5</b> Debugging Tips</a><ul>
-<li class="chapter" data-level="5.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>5.1</b> Debugging shortcuts</a></li>
+<li class="chapter" data-level="2" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html"><i class="fa fa-check"></i><b>2</b> Structures in fortran</a><ul>
+<li class="chapter" data-level="2.1" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#logical-operators"><i class="fa fa-check"></i><b>2.1</b> Logical operators</a></li>
+<li class="chapter" data-level="2.2" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#if-structure"><i class="fa fa-check"></i><b>2.2</b> If structure</a></li>
+<li class="chapter" data-level="2.3" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#select-case"><i class="fa fa-check"></i><b>2.3</b> Select Case</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>6</b> Snippets</a><ul>
-<li class="chapter" data-level="6.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>6.1</b> Check if a file exists</a></li>
-<li class="chapter" data-level="6.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>6.2</b> Open and close files</a></li>
-<li class="chapter" data-level="6.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>6.3</b> Append files in FORTRAN</a></li>
-<li class="chapter" data-level="6.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>6.4</b> Allocatable arrays in FORTRAN 90</a></li>
+<li class="chapter" data-level="3" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>3</b> Debugging Tips</a><ul>
+<li class="chapter" data-level="3.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>3.1</b> Debugging shortcuts</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>4</b> Snippets</a><ul>
+<li class="chapter" data-level="4.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>4.1</b> Check if a file exists</a></li>
+<li class="chapter" data-level="4.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>4.2</b> Open and close files</a></li>
+<li class="chapter" data-level="4.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>4.3</b> Append files in FORTRAN</a></li>
+<li class="chapter" data-level="4.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>4.4</b> Allocatable arrays in FORTRAN 90</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="compiling-errors.html"><a href="compiling-errors.html"><i class="fa fa-check"></i><b>5</b> Compiling errors</a></li>
 </ul>
 
       </nav>
@@ -129,8 +132,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="if-structure" class="section level1">
-<h1><span class="header-section-number">3</span> If structure</h1>
+<div id="structures-in-fortran" class="section level1">
+<h1><span class="header-section-number">2</span> Structures in fortran</h1>
+<div id="logical-operators" class="section level2">
+<h2><span class="header-section-number">2.1</span> Logical operators</h2>
+<p>There are 5 logical operators in Fortran. They are:</p>
+<ol style="list-style-type: decimal">
+<li><code>.NOT.</code></li>
+<li><code>.OR.</code></li>
+<li><code>.AND.</code></li>
+<li><code>.EQV.</code></li>
+<li><code>.NEQV.</code></li>
+</ol>
+<p><code>.NOT.</code> is the highest <code>.OR.</code> and <code>.AND.</code>, <code>.EQV.</code> and <code>.NEQV.</code> are the lowest.</p>
+</div>
+<div id="if-structure" class="section level2">
+<h2><span class="header-section-number">2.2</span> If structure</h2>
 <pre><code>IF (logical-expression-1) THEN
 statement sequence 1
 ELSE IF (logical-expression-2) THEN
@@ -142,13 +159,22 @@ ELSE IF (.....) THEN
 ELSE
 10 statement sequence ELSE END IF </code></pre>
 </div>
+<div id="select-case" class="section level2">
+<h2><span class="header-section-number">2.3</span> Select Case</h2>
+<div class="figure">
+<img src="https://snag.gy/03Xijy.jpg" alt="Select Case" />
+<p class="caption">Select Case</p>
+</div>
+
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="logical-operators.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="select-case.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="debugging-tips.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

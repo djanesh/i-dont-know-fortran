@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="if-structure.html">
-<link rel="next" href="debugging-tips.html">
+<link rel="prev" href="snippets.html">
+
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -100,18 +100,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>2</b> Logical operators</a></li>
-<li class="chapter" data-level="3" data-path="if-structure.html"><a href="if-structure.html"><i class="fa fa-check"></i><b>3</b> If structure</a></li>
-<li class="chapter" data-level="4" data-path="select-case.html"><a href="select-case.html"><i class="fa fa-check"></i><b>4</b> Select Case</a></li>
-<li class="chapter" data-level="5" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>5</b> Debugging Tips</a><ul>
-<li class="chapter" data-level="5.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>5.1</b> Debugging shortcuts</a></li>
+<li class="chapter" data-level="2" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html"><i class="fa fa-check"></i><b>2</b> Structures in fortran</a><ul>
+<li class="chapter" data-level="2.1" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#logical-operators"><i class="fa fa-check"></i><b>2.1</b> Logical operators</a></li>
+<li class="chapter" data-level="2.2" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#if-structure"><i class="fa fa-check"></i><b>2.2</b> If structure</a></li>
+<li class="chapter" data-level="2.3" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#select-case"><i class="fa fa-check"></i><b>2.3</b> Select Case</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>6</b> Snippets</a><ul>
-<li class="chapter" data-level="6.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>6.1</b> Check if a file exists</a></li>
-<li class="chapter" data-level="6.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>6.2</b> Open and close files</a></li>
-<li class="chapter" data-level="6.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>6.3</b> Append files in FORTRAN</a></li>
-<li class="chapter" data-level="6.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>6.4</b> Allocatable arrays in FORTRAN 90</a></li>
+<li class="chapter" data-level="3" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>3</b> Debugging Tips</a><ul>
+<li class="chapter" data-level="3.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>3.1</b> Debugging shortcuts</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>4</b> Snippets</a><ul>
+<li class="chapter" data-level="4.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>4.1</b> Check if a file exists</a></li>
+<li class="chapter" data-level="4.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>4.2</b> Open and close files</a></li>
+<li class="chapter" data-level="4.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>4.3</b> Append files in FORTRAN</a></li>
+<li class="chapter" data-level="4.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>4.4</b> Allocatable arrays in FORTRAN 90</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="compiling-errors.html"><a href="compiling-errors.html"><i class="fa fa-check"></i><b>5</b> Compiling errors</a></li>
 </ul>
 
       </nav>
@@ -129,20 +132,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="select-case" class="section level1">
-<h1><span class="header-section-number">4</span> Select Case</h1>
-<div class="figure">
-<img src="https://snag.gy/03Xijy.jpg" alt="Select Case" />
-<p class="caption">Select Case</p>
-</div>
+<div id="compiling-errors" class="section level1">
+<h1><span class="header-section-number">5</span> Compiling errors</h1>
+<ul>
+<li>The application was unable to start correctly (0xc0000018). Click Ok to close the application. This question is also referred in <a href="https://superuser.com/questions/610495/the-application-was-unable-to-start-correctly-0xc0000018-windows-8-x64">StackOverflow</a>
+<ul>
+<li>I tried the following:
+<ul>
+<li>First I used instructions that I had listed in <a href="http://localhost/myblog/public/efdcplus-configuration/index.html">my blog</a> and rebuild the solution. After setting the properties correctly, the program ran in debug mode without any problem. That was working temporarily because the optimization was turned on. When I turned on the optimization, then I was getting message “Cannot view register variable” when debugging particular variable.</li>
+<li>I tried the solution in superuser and the accepted solution solved my issue.</li>
+</ul></li>
+</ul></li>
+</ul>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="if-structure.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="debugging-tips.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="snippets.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

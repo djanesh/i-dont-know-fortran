@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="select-case.html">
+<link rel="prev" href="structures-in-fortran.html">
 <link rel="next" href="snippets.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -100,18 +100,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>2</b> Logical operators</a></li>
-<li class="chapter" data-level="3" data-path="if-structure.html"><a href="if-structure.html"><i class="fa fa-check"></i><b>3</b> If structure</a></li>
-<li class="chapter" data-level="4" data-path="select-case.html"><a href="select-case.html"><i class="fa fa-check"></i><b>4</b> Select Case</a></li>
-<li class="chapter" data-level="5" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>5</b> Debugging Tips</a><ul>
-<li class="chapter" data-level="5.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>5.1</b> Debugging shortcuts</a></li>
+<li class="chapter" data-level="2" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html"><i class="fa fa-check"></i><b>2</b> Structures in fortran</a><ul>
+<li class="chapter" data-level="2.1" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#logical-operators"><i class="fa fa-check"></i><b>2.1</b> Logical operators</a></li>
+<li class="chapter" data-level="2.2" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#if-structure"><i class="fa fa-check"></i><b>2.2</b> If structure</a></li>
+<li class="chapter" data-level="2.3" data-path="structures-in-fortran.html"><a href="structures-in-fortran.html#select-case"><i class="fa fa-check"></i><b>2.3</b> Select Case</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>6</b> Snippets</a><ul>
-<li class="chapter" data-level="6.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>6.1</b> Check if a file exists</a></li>
-<li class="chapter" data-level="6.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>6.2</b> Open and close files</a></li>
-<li class="chapter" data-level="6.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>6.3</b> Append files in FORTRAN</a></li>
-<li class="chapter" data-level="6.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>6.4</b> Allocatable arrays in FORTRAN 90</a></li>
+<li class="chapter" data-level="3" data-path="debugging-tips.html"><a href="debugging-tips.html"><i class="fa fa-check"></i><b>3</b> Debugging Tips</a><ul>
+<li class="chapter" data-level="3.1" data-path="debugging-tips.html"><a href="debugging-tips.html#debugging-shortcuts"><i class="fa fa-check"></i><b>3.1</b> Debugging shortcuts</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="snippets.html"><a href="snippets.html"><i class="fa fa-check"></i><b>4</b> Snippets</a><ul>
+<li class="chapter" data-level="4.1" data-path="snippets.html"><a href="snippets.html#check-if-a-file-exists"><i class="fa fa-check"></i><b>4.1</b> Check if a file exists</a></li>
+<li class="chapter" data-level="4.2" data-path="snippets.html"><a href="snippets.html#open-and-close-files"><i class="fa fa-check"></i><b>4.2</b> Open and close files</a></li>
+<li class="chapter" data-level="4.3" data-path="snippets.html"><a href="snippets.html#append-files-in-fortran"><i class="fa fa-check"></i><b>4.3</b> Append files in FORTRAN</a></li>
+<li class="chapter" data-level="4.4" data-path="snippets.html"><a href="snippets.html#allocatable-arrays-in-fortran-90"><i class="fa fa-check"></i><b>4.4</b> Allocatable arrays in FORTRAN 90</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="compiling-errors.html"><a href="compiling-errors.html"><i class="fa fa-check"></i><b>5</b> Compiling errors</a></li>
 </ul>
 
       </nav>
@@ -130,8 +133,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="debugging-tips" class="section level1">
-<h1><span class="header-section-number">5</span> Debugging Tips</h1>
-<p>Source: <a href="https://software.intel.com/en-us/articles/tips-for-debugging-run-time-failures-in-intel-fortran-applications" class="uri">https://software.intel.com/en-us/articles/tips-for-debugging-run-time-failures-in-intel-fortran-applications</a> Tips for Debugging Run-time Failures in Applications Built with the Intel® Fortran Compiler Your app builds successfully, but crashes at runtime. What Next? Try some useful Intel compiler diagnostic options before launching into lengthy debugger sessions.</p>
+<h1><span class="header-section-number">3</span> Debugging Tips</h1>
+<p>Source: <a href="https://software.intel.com/en-us/articles/tips-for-debugging-run-time-failures-in-intel-fortran-applications" class="uri">https://software.intel.com/en-us/articles/tips-for-debugging-run-time-failures-in-intel-fortran-applications</a></p>
+<p>Your app builds successfully, but crashes at runtime. What Next? Try some useful Intel compiler diagnostic options before launching into lengthy debugger sessions.</p>
 <ol style="list-style-type: decimal">
 <li><p>Build with /traceback (Windows<em>) or –traceback (Linux</em> or Mac OS* X). This can give a stack trace with subroutine or function names, source filenames and line numbers at the point of failure, if it is in user code, without the need to build with debug symbols. This is designed as a lightweight option that can also be left enabled for release builds. If an end user encounters a problem, the traceback can be a starting point for a bug report.</p></li>
 <li><p>Build with /gen-interfaces /warn:interfaces (Windows) or –gen-interfaces –warn interfaces (Linux or Mac OS X). This is able to detect at compile time many instances of argument mismatches between caller and callee, which can otherwise lead to hard-to-debug runtime failures. These options automatically create and check explicit, Fortran90 style interfaces for Fortran77 style or other code that does not already have them. There is no impact on run-time performance.</p></li>
@@ -148,11 +152,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>OK, sometimes you need to do the heavy lifting. If these suggestions haven’t helped, or if they helped localize the problem but you need more information, it may be time to start interactive debugging. For Windows, see the section Building Applications / Debugging in the main compiler documentation. For Linux or Mac OS X, see the documentation for the Intel® Debugger (idb).</li>
 </ol>
 <div id="debugging-shortcuts" class="section level2">
-<h2><span class="header-section-number">5.1</span> Debugging shortcuts</h2>
+<h2><span class="header-section-number">3.1</span> Debugging shortcuts</h2>
 <ul>
 <li>CTRL + <code>-</code> : To go back and forth to the last used.</li>
 <li><code>F12</code> : Go to Definition</li>
+<li>We can use</li>
 </ul>
+
 </div>
 </div>
             </section>
@@ -160,7 +166,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="select-case.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="structures-in-fortran.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="snippets.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

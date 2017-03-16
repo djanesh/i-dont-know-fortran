@@ -1,0 +1,14 @@
+# Compiling errors
+
+* The application was unable to start correctly (0xc0000018). Click Ok to close the application. This question is also referred in 
+[StackOverflow](https://superuser.com/questions/610495/the-application-was-unable-to-start-correctly-0xc0000018-windows-8-x64)
+    * I tried the following: 
+        * First I used instructions that I had listed in [my blog](http://localhost/myblog/public/efdcplus-configuration/index.html) and 
+        rebuild the solution. After setting the properties correctly, the program ran in debug mode without any problem. That was working 
+        temporarily because the optimization was turned on. When I turned on the optimization, then I was getting message "Cannot view
+        register variable" when debugging particular variable. 
+        * I tried the solution in superuser and the accepted solution solved my issue. 
+        
+* If we get error such as This Hollerith or character constant is too long and cannot be used in the current numeric context.   ['UNIQUE'] then 
+we will get the link error in visual studio. The LNKerror 1120 can be fixed by declaring the variable. Click on F12 to look at the definition. If 
+by clicking F12 nothing happens, that means that variable is not declared. 
