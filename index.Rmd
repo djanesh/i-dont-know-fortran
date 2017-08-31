@@ -3,7 +3,7 @@ title: "Fortran-Programming"
 author: "Janesh Devkota"
 date: "March 2, 2017"
 output: 
-  bookdown::gitbook
+  bookdown::pdf_document2
 ---
 
 
@@ -55,6 +55,13 @@ ELSE
 
 ## Select Case 
 
-![Select Case](https://snag.gy/03Xijy.jpg)
+```{r}
+#![Select Case](https://snag.gy/03Xijy.jpg)
+
+```
 
 
+## Special Functions 
+
+* BACKSPACE
+    USAGE : `BACKSPACE9(150)`
